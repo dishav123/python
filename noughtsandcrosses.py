@@ -174,7 +174,10 @@ def menu():
     choice=input("Enter one of the following options.\n"
                 "\t1-Play the game\n\t2-Save your in Leaderboard\n"
                 "\t3-Load and display the leaderboard\n\tq-End the program\n1,2,3,q?:").lower()
-    return choice
+    if choice in('1','2','3','q'):
+        return choice
+    else:
+        print("Invalid input, Please prompt 1 2 3 or q")
 
 def load_scores():
     # develop code to load the leaderboard scores
